@@ -23,6 +23,7 @@ import edu.iitd.cse.openieListExtractor.extractors.ListExtractorLanguageModelBas
 
 import java.net.InetSocketAddress
 import com.sun.net.httpserver.HttpServer
+System.out.println("Dummy change")
 
 /***
  * A command line application for exploring Open IE.
