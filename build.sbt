@@ -49,6 +49,14 @@ libraryDependencies ++= Seq(
 //  "org.codehaus.plexus" %% "plexus-utils" % "3.0.22"
 //)
 
+name := "sentiment-analyzer"
+description := "A demo application to showcase sentiment analysis using Stanford CoreNLP and Scala"
+version  := "0.1.0"
+ 
+scalaVersion := "2.11.7"
+ 
+libraryDependencies += "edu.stanford.nlp" % "stanford-corenlp" % "3.5.2" artifacts (Artifact("stanford-corenlp", "models"), Artifact("stanford-corenlp"))
+
 mainClass in assembly := Some("edu.knowitall.openie.OpenIECli")
 
 scalacOptions ++= Seq("-unchecked", "-deprecation")

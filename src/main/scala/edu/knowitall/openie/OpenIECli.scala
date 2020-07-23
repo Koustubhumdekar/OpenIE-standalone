@@ -236,6 +236,21 @@ object OpenIECli extends App {
     // a sentencer used if --split is specified
     lazy val sentencer = new OpenNlpSentencer
 
+    import org.scalatest.{FunSpec, Matchers}
+ 
+ //new test code 
+class SentimentAnalyzerSpec extends FunSpec with Matchers {
+ 
+  describe("sentiment analyzer") {
+ 
+    it("should return POSITIVE when input has positive emotion") {
+      val input = "Scala is a great general purpose language."
+      val sentiment = SentimentAnalyzer.mainSentiment(input)
+      sentiment should be(Sentiment.POSITIVE)
+    }
+}
+//until here 
+
     config.inputFile.foreach { file =>
       System.err.println("Processing file: " + file)
     }
